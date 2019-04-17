@@ -1,1 +1,0 @@
-The way the JSP tag overloads the 'type' attribute to allow specifying an instance is ugly        

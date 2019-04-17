@@ -1,1 +1,0 @@
-Details are: - fixed my own stupid typo bug in AbstractReferralPlugin        

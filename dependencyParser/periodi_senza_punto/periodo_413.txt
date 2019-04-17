@@ -1,1 +1,0 @@
-IE 5  5/6  0 still throws some really disturbing error messages which I could not yet resolve         

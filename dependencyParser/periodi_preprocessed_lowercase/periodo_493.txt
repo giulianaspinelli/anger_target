@@ -1,1 +1,0 @@
-i have a bunch of ugly components for opening popups at the same time than you click on a linksubmit or directlink      

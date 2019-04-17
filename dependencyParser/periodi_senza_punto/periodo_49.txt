@@ -1,1 +1,0 @@
-This looks reasonable to me       sucks we have to special case handling of ' '            

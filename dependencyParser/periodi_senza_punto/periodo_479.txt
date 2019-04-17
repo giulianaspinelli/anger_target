@@ -1,1 +1,0 @@
-ah stupid me  missed the isEmpty()       

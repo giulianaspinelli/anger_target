@@ -1,1 +1,0 @@
-i am currently trying to get it into ajdt dev builds but my git push is timing out damn thing      

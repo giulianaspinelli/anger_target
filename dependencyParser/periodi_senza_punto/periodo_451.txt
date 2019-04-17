@@ -1,1 +1,0 @@
-The Java 5 thing is annoying  and I found it non-trivial to change the layout (e  g       

@@ -1,1 +1,0 @@
-ContainerRequest is a dumb data object        
