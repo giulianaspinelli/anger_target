@@ -1,1 +1,1 @@
-another case where windows' default encoding is mucking us up  i'm sure.     
+Another case where Windows' default encoding is mucking us up  I'm sure.     

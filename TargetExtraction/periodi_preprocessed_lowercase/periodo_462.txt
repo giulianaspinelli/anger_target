@@ -1,1 +1,0 @@
-(4) now that i'm using thrift in anger  i find that the fidelity of the language-binding for the types that already exist  seems far  far  more important than adding new types.  

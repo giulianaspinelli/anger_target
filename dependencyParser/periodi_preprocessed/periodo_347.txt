@@ -1,1 +1,1 @@
-i have the oracle 10g driver lying around here somewhere   but it's still annoying.     
+I have the Oracle 10g driver lying around here somewhere   but it's still annoying.     

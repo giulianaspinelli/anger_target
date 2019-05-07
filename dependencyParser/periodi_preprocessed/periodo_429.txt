@@ -1,1 +1,1 @@
-this is indeed a annoying bug  i've replicated it locally in a test case.     
+This is indeed a annoying bug  I've replicated it locally in a test case.     

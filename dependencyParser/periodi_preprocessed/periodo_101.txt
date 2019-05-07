@@ -1,1 +1,1 @@
-as far as the query shit  i have no idea if solrdispatchfilter or whatever could/should do thread.currentthread().setname(x) or whatever (and maybe restore after).     
+As far as the query shit  i have no idea if solrdispatchfilter or whatever could/should do Thread.currentThread.setNamex or whatever and maybe restore after.     

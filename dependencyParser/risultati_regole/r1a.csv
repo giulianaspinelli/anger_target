@@ -1,47 +1,35 @@
 9,rule
-26,invalid target
-26,sigh
-29,nothing
-33,name
 41,bug
-52,maven
+46,mojo
 53,sed
 59,way
+65,checks
 67,bug
-70,maven
 71,error
 72,design
-74,thing
+74,invalid target
 83,work
-85,ie
-105,attempt
-110,npe
-113,encapsulation
-114,i
+110,strik
+113,package
 117,bug
-123,dyslexia
+119,intellij
 129,time
 130,idea
 130,array
-135,explorer
-141,bit
-145,=
-145,=
-145,=
-145,=
-145,=
-145,=
-145,=
-145,=
-155,mistake
-158,invalid target
+135,invalid target
+145,invalid target
+145,invalid target
+145,invalid target
+145,invalid target
+145,invalid target
+145,invalid target
+145,invalid target
+145,invalid target
 161,resolution
-170,attitude
-172,thanks
+178,invalid target
+183,invalid target
 186,mistake
 186,mistake
-192,theres
-193,values
 194,people
 197,commentary
 198,hacks
@@ -50,30 +38,25 @@
 204,thing
 212,death
 216,drivers
-219,bug
+219,BUG
 220,effect
 225,issue
 229,regression
 230,identifier
 231,issue
 236,issue
-238,system
 241,thing
 242,workaround
 245,methods
 248,thing
-253,invalid target
-254,maven
+253,workaround
 254,idea
 256,problem
-259,thing
 261,transcoder
 262,bug
 264,error
-265,invalid target
-266,invalid target
+266,xsl
 267,bug
-270,invalid target
 272,hack
 273,bugs
 276,hat
@@ -82,8 +65,47 @@
 277,performance
 277,performance
 279,check
-280,mistake
 284,hack
 284,workaround
 285,issue
-286,space
+293,error
+296,exceptions
+302,thing
+304,something
+308,experience
+310,part
+310,part
+310,part
+310,part
+313,problems
+314,bug
+315,check
+317,piece
+321,way
+322,part
+323,hack
+327,implementation
+330,mistake
+334,invalid target
+334,invalid target
+337,exception
+338,rule
+340,bug
+344,bug
+346,java
+354,change
+356,people
+356,people
+367,hack
+373,sry
+374,proposal
+380,invalid target
+386,mistake
+388,problem
+391,mapping
+392,bug
+407,patch
+409,functionality
+413,messages
+414,typo
+416,tool

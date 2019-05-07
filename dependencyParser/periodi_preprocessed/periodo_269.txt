@@ -1,1 +1,1 @@
-and yes i agree with you that making metaattribute mutable was quite ugly.      
+And yes I agree with you that making MetaAttribute mutable was quite ugly.      

@@ -1,1 +1,0 @@
-in xerces-bug.xsd (i hate this file name -) )  you have > attributeformdefault='unqualified' which means local attribute declarations in this schema document don't have a  target namespace.     

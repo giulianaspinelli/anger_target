@@ -1,1 +1,1 @@
-i met the same annoying bug with xerces c++ 2.7.0.      
+I met the same annoying bug with xerces C++ 2.7.0.      

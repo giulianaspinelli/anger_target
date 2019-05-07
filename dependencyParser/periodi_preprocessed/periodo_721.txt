@@ -1,1 +1,1 @@
-> i'd hate for an implementation change on the jr side to cause this to break again.      
+> I'd hate for an implementation change on the JR side to cause this to break again.      

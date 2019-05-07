@@ -1,1 +1,1 @@
-that's pretty ugly and still won't cover certain cases  but it'll work for this user and previous users.     
+That's pretty ugly and still won't cover certain cases  but it'll work for this user and previous users.     

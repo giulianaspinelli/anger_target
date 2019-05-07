@@ -1,1 +1,1 @@
-removes the dumb serveraddresstoserverinfo from servermanager.      
+Removes the dumb serverAddressToServerInfo from ServerManager.      

@@ -1,1 +1,1 @@
-this is especially bad because if executing via a hive server it will cause the service process to crash.       
+This is especially bad because if executing via a Hive Server it will cause the service process to crash.       

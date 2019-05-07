@@ -1,1 +1,1 @@
-specifying pages starting with /web-inf is imo ugly.      
+Specifying pages starting with /WEB-INF is IMO ugly.      

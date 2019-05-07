@@ -1,1 +1,1 @@
-some annoying hadoop configuration.      
+Some annoying Hadoop configuration.      

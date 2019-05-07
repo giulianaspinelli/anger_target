@@ -1,1 +1,1 @@
-takes some ugly code for this to be triggered ... an object's tostring() must return null  which is generally a no-no.     
+Takes some ugly code for this to be triggered ... an object's toString must return null  which is generally a no-no.     

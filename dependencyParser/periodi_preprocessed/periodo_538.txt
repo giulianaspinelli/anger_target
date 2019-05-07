@@ -1,1 +1,1 @@
-thilo: > the terrible twins (eclipse and maven) are driving me crazy.      
+Thilo: > The terrible twins Eclipse and Maven are driving me crazy.      

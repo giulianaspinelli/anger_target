@@ -1,1 +1,1 @@
-thomas  [ i'm not a solr-dev  these are just my thoughts / opinions ]  i think that's a really horrible idea.    
+Thomas  [ I'm not a solr-dev  these are just my thoughts / opinions ]  I think that's a really horrible idea.    

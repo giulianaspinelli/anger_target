@@ -1,1 +1,1 @@
-i've been doing a lot of experimentation with maven and have come to hate it.      
+I've been doing a lot of experimentation with Maven and have come to hate it.      

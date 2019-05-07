@@ -1,1 +1,1 @@
-a stupid bug in a patch that is already applied.      
+A stupid bug in a patch that is already applied.      

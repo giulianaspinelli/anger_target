@@ -1,1 +1,1 @@
-i don't have to ensure that the classloader knows groovy classes  *you* must do that.     
+I don't have to ensure that the classloader knows groovy classes  *you* must do that.     

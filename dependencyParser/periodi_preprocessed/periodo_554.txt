@@ -1,1 +1,1 @@
-(i hate it when i have to define properties in my home/build.properties without a proper namespace).      
+I hate it when I have to define properties in my HOME/build.properties without a proper namespace.      

@@ -1,1 +1,0 @@
-Filling diags.log is bad mojo  since it's never rotated.     

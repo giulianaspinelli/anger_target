@@ -1,1 +1,0 @@
-i have a few comments/questions: * parsing the mapreduce job name out of the dfsclient name is kind of an ugly hack.      

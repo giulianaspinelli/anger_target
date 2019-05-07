@@ -1,1 +1,1 @@
-well  either you query the database every damn time  and your plugin/tool/code will be super slow.    
+Well  either you query the database every damn time  and your plugin/tool/code will be super slow.    

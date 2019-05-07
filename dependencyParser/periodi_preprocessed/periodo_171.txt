@@ -1,1 +1,1 @@
-i think java 7 close-with-resources is stupid too.      
+I think java 7 close-with-resources is stupid too.      

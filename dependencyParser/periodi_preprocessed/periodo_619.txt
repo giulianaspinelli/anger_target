@@ -1,1 +1,1 @@
-it's cryptic and ugly for users and really doesn't tell them what they should do about the problem.      
+It's cryptic and ugly for users and really doesn't tell them what they should do about the problem.      

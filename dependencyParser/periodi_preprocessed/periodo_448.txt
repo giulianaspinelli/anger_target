@@ -1,1 +1,1 @@
-it's a bit annoying in apache ode as we have to ask our users to work this around.      
+It's a bit annoying in Apache ODE as we have to ask our users to work this around.      

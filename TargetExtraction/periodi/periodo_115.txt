@@ -1,1 +1,0 @@
-You would need to implement session resume thats a whole new can of worms.      

@@ -1,1 +1,1 @@
-launchcontext.getuser().equals(tokenid.getapplicationsubmitter() - this is now a worthless check.      
+launchContext.getUser.equalstokenId.getApplicationSubmitter - this is now a worthless check.      

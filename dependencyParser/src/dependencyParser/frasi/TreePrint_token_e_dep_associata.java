@@ -77,7 +77,7 @@ public class TreePrint_token_e_dep_associata {
 	}
 
 
-	public static void main(String args[]) throws Exception {
+	public static void treePrint_token_e_dep_associata() throws Exception {
 
 		LexicalizedParser lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz");
 

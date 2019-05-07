@@ -1,1 +1,1 @@
-(i had deleted some non-security changes in the previous patch  and i might have deleted too much.)     
+I had deleted some non-security changes in the previous patch  and I might have deleted too much.     

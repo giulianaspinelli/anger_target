@@ -1,1 +1,0 @@
-i think calling getcharref(count  faposref   > gaposref) directly is not that much typing :-)    macros are the spawn of the devil: i hate them.    

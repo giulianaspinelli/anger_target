@@ -40,7 +40,7 @@ public class ParseDoc {
 		return tokenizer.tokenize();
 	}
 
-	public static void main(String[] args) { 
+	public static void parseDoc() { 
 		String str = "My dog also likes eating sausage.";
 		// Parser parser = new Parser(); 
 		Tree tree = parser.parse(str);  

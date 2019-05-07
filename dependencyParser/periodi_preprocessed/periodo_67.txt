@@ -1,1 +1,1 @@
-this is a pretty awful bug.      
+This is a pretty awful bug.      

@@ -1,1 +1,1 @@
-we removed support for stupid gzip compression support in stored fields in 3.0.      
+We removed support for stupid GZIP compression support in stored fields in 3.0.      

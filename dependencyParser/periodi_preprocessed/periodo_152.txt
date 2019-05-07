@@ -1,1 +1,1 @@
-sometimes people can be so blind... stupid me didn't saw that subclass is not extending superclass.      
+sometimes people can be so blind... Stupid me didn't saw that SubClass is not extending SuperClass.      

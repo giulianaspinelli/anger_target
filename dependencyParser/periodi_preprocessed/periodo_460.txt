@@ -1,1 +1,1 @@
-the need for page_context is due to some very complex (and annoying!)      
+The need for PAGE_CONTEXT is due to some very complex and annoying!      

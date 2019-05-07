@@ -1,1 +1,1 @@
-the confusion and mixup between ognlvaluestack  actioncontext  actioninvocation  etc is too much.   
+The confusion and mixup between OgnlValueStack  ActionContext  ActionInvocation  etc is too much.   

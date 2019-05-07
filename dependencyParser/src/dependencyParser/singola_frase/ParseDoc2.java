@@ -27,7 +27,7 @@ public class ParseDoc2  {
   /** A logger for this class */
   private static Redwood.RedwoodChannels log = Redwood.channels(DependencyParserDemo.class);
 
-  public static void main(String[] args) {
+  public static void parseDoc2(String[] args) {
     String modelPath = DependencyParser.DEFAULT_MODEL;
     String taggerPath = "edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger";
 

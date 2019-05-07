@@ -1,1 +1,0 @@
-i don't require the whitespace for rendering anywhere (at least that i know of -- this isn't going to be a fun way to find out)  but just about any other debugging issue is going to be terrible.     

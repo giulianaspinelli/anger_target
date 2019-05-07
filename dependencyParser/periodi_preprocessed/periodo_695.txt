@@ -1,1 +1,1 @@
-i feel like this patch i'm providing is really dumb because it introduces another profile for no sake other than the name.      
+I feel like this patch I'm providing is really dumb because it introduces another profile for no sake other than the name.      

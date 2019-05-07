@@ -1,1 +1,1 @@
-to re-use config.h (and define have_config_h): i find it in practice annoying because it assumes 'config.h' is at the same level of 'thrift.h'.      
+to re-use config.h and define HAVE_CONFIG_H: I find it in practice annoying because it assumes 'config.h' is at the same level of 'Thrift.h'.      

@@ -1,1 +1,1 @@
-ok going mad  that patch does work  other unrelated bug was causing eclipse plugins not to load on startup.    
+Ok going mad  that patch does work  other unrelated bug was causing eclipse plugins not to load on startup.    

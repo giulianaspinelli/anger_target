@@ -1,1 +1,1 @@
-i really dislike the format  where the password is hidden with ***  it is kind of ugly and i don't think it serves any purpose to show the ***.      
+I really dislike the format 'scheme://user:***@host' where the password is hidden with ***  it is kind of ugly and I don't think it serves any purpose to show the ***.      

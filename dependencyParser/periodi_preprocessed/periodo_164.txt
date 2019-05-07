@@ -1,1 +1,1 @@
-a somewhat kludgey fix for integertype data in cassandra.      
+A somewhat kludgey fix for IntegerType data in cassandra.      

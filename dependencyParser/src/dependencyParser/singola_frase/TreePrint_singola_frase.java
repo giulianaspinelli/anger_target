@@ -52,7 +52,7 @@ public class TreePrint_singola_frase {
 //	}
 
 
-	public static void main(String args[]) throws Exception {
+	public static void treePrint_singola_frase() throws Exception {
 		
 		LexicalizedParser lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz");
 		

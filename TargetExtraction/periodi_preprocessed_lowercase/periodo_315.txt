@@ -1,1 +1,0 @@
-* {{authorizerequest}} ** {{launchcontext.getuser().equals(tokenid.getapplicationsubmitter()}} - this is now a worthless check.      

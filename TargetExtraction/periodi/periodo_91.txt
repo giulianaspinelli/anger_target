@@ -1,1 +1,0 @@
-The Async API in http client 4.x really sucks.      

@@ -1,1 +1,1 @@
-jonathan  you have stumbled on an old ugly problem in thrift.     
+Jonathan  you have stumbled on an old ugly problem in Thrift.     

@@ -40,7 +40,7 @@ public class Tagger {
 		return tokenizer.tokenize();
 	}
 
-	public static void main(String[] args) { 
+	public static void tagger() { 
 		
 		
 		String str = "~michael.simons also you are incorrect.  ";

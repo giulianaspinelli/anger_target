@@ -68,7 +68,7 @@ public class TreePrint {
 	}
 
 
-	public static void main(String args[]) throws Exception {
+	public static void treePrint() throws Exception {
 
 		LexicalizedParser lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz");
 

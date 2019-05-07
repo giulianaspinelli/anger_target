@@ -1,1 +1,1 @@
-yes  i already said that my comment about assertequals was stupid.     
+yes  I already said that my comment about assertEquals was stupid.     

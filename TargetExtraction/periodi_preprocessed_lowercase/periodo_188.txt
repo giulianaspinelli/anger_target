@@ -1,1 +1,0 @@
-stupid me i looked at persistentbag.add(int object) instead of persistentbag.add(object).     

@@ -1,1 +1,1 @@
-shame on me - lack of a nice formatter  i made an error with getting the month: date.getmonth() returns 0 to 11  not 1 to 12.    
+Shame on me - lack of a nice formatter  I made an error with getting the month: Date.getMonth returns 0 to 11  not 1 to 12.    

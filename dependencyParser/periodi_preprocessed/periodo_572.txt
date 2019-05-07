@@ -1,1 +1,1 @@
-i'm sorry i sent the minimal patch without explanation (i hate browser hot keys...): you can push either this complete patch or do 'mvn -p codegen' after importing the minimal patch and then push the result.      
+I'm sorry I sent the minimal patch without explanation I hate browser hot keys...: You can push either this complete patch or do 'mvn -P codegen' after importing the minimal patch and then push the result.      

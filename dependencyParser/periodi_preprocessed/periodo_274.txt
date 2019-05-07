@@ -1,1 +1,1 @@
-advice: this is partly related to the great namespace debate/debacle  which  consumed entirely too much w3c attention for entirely too long.     
+Advice: This is partly related to the Great Namespace Debate/Debacle  which  consumed entirely too much W3C attention for entirely too long.     

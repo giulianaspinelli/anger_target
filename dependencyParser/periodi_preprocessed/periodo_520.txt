@@ -1,1 +1,1 @@
-this would be terrible for i18n sites.      
+This would be terrible for I18N sites.      

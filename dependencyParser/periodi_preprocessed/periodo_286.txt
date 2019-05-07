@@ -1,1 +1,1 @@
-also  all variables (except dates) are defined not-null - instead of a null for a fk string  they use a single space (really annoying).    
+Also  all variables except dates are defined not-null - instead of a null for a FK string  they use a single space really annoying.    

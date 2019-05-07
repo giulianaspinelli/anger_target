@@ -1,1 +1,0 @@
-submitting 340k of modified struts-html.tld seems just too much.      

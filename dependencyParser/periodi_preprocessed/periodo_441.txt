@@ -1,1 +1,1 @@
-yes  this difference in the dom and xpath data models is annoying.     
+Yes  this difference in the DOM and XPath data models is annoying.     
