@@ -1,1 +1,1 @@
-/me dumb  it's my own debug that NPEs.     
+me dumb  its my own debug that NPEs     

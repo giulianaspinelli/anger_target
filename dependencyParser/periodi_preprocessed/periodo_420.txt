@@ -1,1 +1,1 @@
-Not the only ones who've hit this nasty: http://dev.rubyonrails.org/ticket/7895      
+Not the only ones whove hit this nasty httpdevrubyonrailsorgticket7895      

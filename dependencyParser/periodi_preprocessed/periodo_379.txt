@@ -1,1 +1,1 @@
-Stupid catch block mistake.      
+Stupid catch block mistake      

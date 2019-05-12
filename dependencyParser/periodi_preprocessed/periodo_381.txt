@@ -1,1 +1,1 @@
-Stupid git diff.      
+Stupid git diff      

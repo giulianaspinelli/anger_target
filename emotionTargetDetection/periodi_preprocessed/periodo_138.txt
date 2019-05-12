@@ -1,0 +1,1 @@
+i'd hate to see it slowed down in the name of typesafety esp in code that solr users don't have to interface with.      

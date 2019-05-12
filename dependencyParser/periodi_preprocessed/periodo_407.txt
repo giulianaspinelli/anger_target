@@ -1,1 +1,1 @@
-0002 is pretty ugly  but I'm posting it rather than leaving a completely broken patch.     
+0002 is pretty ugly  but Im posting it rather than leaving a completely broken patch     

@@ -1,1 +1,1 @@
-I didn't know we needed to retain backwards config capability across 3.x to 4.x  :-  That sucks and it'll make old code stick around longer.      
+I didnt know we needed to retain backwards config capability across 3x to 4x    That sucks and itll make old code stick around longer      

@@ -1,1 +1,1 @@
-Stupid Maven.      
+Stupid Maven      

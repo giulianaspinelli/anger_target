@@ -1,1 +1,1 @@
-Ahhh  I'm stupid  it works with hbase-git repository.    
+Ahhh  Im stupid  it works with hbasegit repository    

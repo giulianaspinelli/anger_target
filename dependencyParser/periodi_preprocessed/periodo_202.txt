@@ -1,1 +1,1 @@
-ContainerRequest is a dumb data object.      
+ContainerRequest is a dumb data object      

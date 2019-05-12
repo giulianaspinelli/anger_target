@@ -1,1 +1,1 @@
-Annoying that uploads are so hard to test  even with Selenium.     
+Annoying that uploads are so hard to test  even with Selenium     

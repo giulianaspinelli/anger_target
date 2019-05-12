@@ -1,1 +1,1 @@
-Original edited patch was messed up... stupid sed!      
+Original edited patch was messed up stupid sed      

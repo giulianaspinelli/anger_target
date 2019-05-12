@@ -1,1 +1,1 @@
-I hate nodejs dependencies for exactly this reason.      
+I hate nodejs dependencies for exactly this reason      

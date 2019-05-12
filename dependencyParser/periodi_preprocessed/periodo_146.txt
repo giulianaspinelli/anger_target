@@ -1,1 +1,1 @@
-Making class attributes protected is evil and will not happen.      
+Making class attributes protected is evil and will not happen      
