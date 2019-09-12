@@ -9,25 +9,11 @@ import targetExtraction.frasi.R1;
 import targetExtraction.frasi.R2;
 import targetExtraction.frasi.R3;
 import targetExtraction.frasi.R4;
-import targetExtraction.frasi.R5; 
+import targetExtraction.frasi.R5;
+import targetExtraction.frasi.RisultatiRegoleUnificati;
+//import targetExtraction.frasi.R6; 
 
 public class Main {
-	
-	public static void menu(int i)  {
-		
-       //System.out.printf("Enter j Value:  ");
-       
-    	   // int j = in.nextInt();      
-      // if(io > j)
-       //    System.out.println(io+"i is greater than "+j);
-      // else
-       //    System.out.println(j+" is greater than "+io);
-	
-	}
-	
-	
-	
-	
 	
 	
 	public static void main(String[] args) throws Exception { 
@@ -53,6 +39,10 @@ public class Main {
         int i=0;
         int risposta = 0;
         Scanner in = new Scanner(System.in);
+        
+        String nome_fileInputRisultatiunificati;
+        String nomeFileOutputRisultatiunificati;
+        
        /* Scanner scanner = new Scanner(System. in);
         String inputString;
         System.out.print("Enter a string : ");    	      
@@ -72,13 +62,14 @@ public class Main {
             System.out.println("5 Eliminzione {} nelle frasi");
             System.out.println("6 Eliminzione [] nelle frasi");
             System.out.println("7 Eliminzione () nelle frasi");
-            System.out.println("8 Estrazione delle dipendenze grammaticali identificate con Stanford Parser delle frasi (Tagging)");
-            System.out.println("9 Estrazione delle dipendenze identificate con Stanford Parser delle frasi (Universal dependencies)");
-            System.out.println("10 Riconoscimento del target delle frasi usando la regola R1a_lc");
-            System.out.println("11 Riconoscimento del target delle frasi usando la regola R1b_lc");
-            System.out.println("12 Riconoscimento del target delle frasi usando la regola R1c_lc");
-            System.out.println("13 Riconoscimento del target delle frasi usando la regola R1d_lc");
-            System.out.println("14 Riconoscimento del target delle frasi usando la regola R1e_lc"); 
+            System.out.println("8 Estrazione dei POS identificati con Stanford Parser delle frasi (Tagging)");
+            System.out.println("9 Estrazione delle diemndenze identificate con Stanford Parser delle frasi (Universal dependencies)");
+            System.out.println("10 Riconoscimento del target delle frasi usando la regola R1");
+            System.out.println("11 Riconoscimento del target delle frasi usando la regola R2");
+            System.out.println("12 Riconoscimento del target delle frasi usando la regola R3");
+            System.out.println("13 Riconoscimento del target delle frasi usando la regola R4");
+            System.out.println("14 Riconoscimento del target delle frasi usando la regola R5"); 
+            System.out.println("15 Unificazione dei risultati otteniti dalle varie regole"); 
             System.out.println("-1 Uscire dal sistema"); 
             System.out.println(""); 
            
@@ -304,34 +295,39 @@ public class Main {
          	   if(i==0)    	  
          	   {
          		   System.out.println();
-		           System.out.println("******* Riconoscimento del target delle frasi usando la regola R1a_lc *******");
+		           System.out.println("******* Riconoscimento del target delle frasi usando la regola R1 *******");
 		           System.out.println();
 		           nome_filegrammatical_dep="grammatical_dep.txt";
 		           nome_filedependencies="dependencies.txt";
 		           nome_fileoutput="r1.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-		           nome_fileinput=R1.r1a_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+		           nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+		           nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+		           nome_fileinput=R1.r1(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);
 		             
 		           System.out.println();
-		           System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1a_lc *******");
+		           System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1 *******");
 		           System.out.println();
 		           //nome_fileinput="r1.csv";
-		           PrintResultsRule.printResults1a(nome_fileinput);
+		           PrintResultsRule.printResultsRule(nome_fileinput);
          	   }
          	  else
        	      { 
          		 System.out.println();
-	             System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R1a_lc *******");
+	             System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R1 *******");
 	             System.out.println();
 	             nome_filegrammatical_dep="grammatical_dep_preprocessed.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 	             nome_filedependencies="dependencies_preprocessed.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 	             nome_fileoutput="r1_pre.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-	             nome_fileinput=R1.r1a_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+	             nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+		         nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+	             
+	             nome_fileinput=R1.r1(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);
 	             
 	             System.out.println();
-		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1a_lc *******");
+		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1 *******");
 		         System.out.println();
 		        // nome_fileinput="r1_pre.csv";
-		         PrintResultsRule.printResults1a(nome_fileinput);
+		         PrintResultsRule.printResultsRule(nome_fileinput);
        	      }
          	 }
             
@@ -341,34 +337,38 @@ public class Main {
          	   if(i==0)    	  
          	   {
          		  System.out.println();
-		          System.out.println("******* Riconoscimento del target delle frasi usando la regola R1b_lc *******");
+		          System.out.println("******* Riconoscimento del target delle frasi usando la regola R2 *******");
 		          System.out.println();
 		          nome_filegrammatical_dep="grammatical_dep.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 		          nome_filedependencies="dependencies.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 		          nome_fileoutput="r2.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-		          nome_fileinput=R2.r1b_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+		          nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+			      nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+		          nome_fileinput=R2.r2(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);
 	          
 		          System.out.println();
-		          System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1b_lc *******");
+		          System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R2 *******");
 		          System.out.println();
 		          nome_fileinput="r2.csv";
-		          PrintResultsRule.printResults1a(nome_fileinput); 
+		          PrintResultsRule.printResultsRule(nome_fileinput); 
          	   }
          	  else
        	      { 
          		 System.out.println();
-	             System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R1b_lc *******");
+	             System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R2 *******");
 	             System.out.println();
 	             nome_filegrammatical_dep="grammatical_dep_preprocessed.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 	             nome_filedependencies="dependencies_preprocessed.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 	             nome_fileoutput="r2_pre.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-	             nome_fileinput=R2.r1b_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+	             nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+		         nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+	             nome_fileinput=R2.r2(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);
             
 	             System.out.println();
-		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1b_lc *******");
+		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R2 *******");
 		         System.out.println();
 		         nome_fileinput="r2_pre.csv";
-		         PrintResultsRule.printResults1a(nome_fileinput);
+		         PrintResultsRule.printResultsRule(nome_fileinput);
        	      }
          	 }
             
@@ -378,34 +378,38 @@ public class Main {
          	   if(i==0)    	  
          	   {
          		  System.out.println();
-	          	  System.out.println("******* Riconoscimento del target delle frasi usando la regola R1c_lc *******");
+	          	  System.out.println("******* Riconoscimento del target delle frasi usando la regola R3 *******");
 		          System.out.println();
 		          nome_filegrammatical_dep="grammatical_dep.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 		          nome_filedependencies="dependencies.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 		          nome_fileoutput="r3.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-		          nome_fileinput=R3.r1c_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+		          nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+			         nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+		          nome_fileinput=R3.r3(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati, nomeFileOutputRisultatiunificati);
 		             
 		          System.out.println();
-		          System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1c_lc *******");
+		          System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R3 *******");
 		          System.out.println();
 		          nome_fileinput="r3.csv";
-		          PrintResultsRule.printResults1a(nome_fileinput);
+		          PrintResultsRule.printResultsRule(nome_fileinput);
          	   }
          	  else
        	      { 
          		 System.out.println();
-            	 System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R1c_lc *******");
+            	 System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R3 *******");
 	             System.out.println();
 	             nome_filegrammatical_dep="grammatical_dep_preprocessed.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 	             nome_filedependencies="dependencies_preprocessed.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 	             nome_fileoutput="r3_pre.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-	             nome_fileinput=R3.r1c_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+	             nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+		         nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+	             nome_fileinput=R3.r3(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati, nomeFileOutputRisultatiunificati);
 	             
 	             System.out.println();
-		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1c_lc *******");
+		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R3 *******");
 		         System.out.println();
 		         nome_fileinput="r3_pre.csv";
-		         PrintResultsRule.printResults1a(nome_fileinput); 
+		         PrintResultsRule.printResultsRule(nome_fileinput); 
        	      }
          	 }
             
@@ -415,34 +419,38 @@ public class Main {
          	   if(i==0)    	  
          	   {
          		    System.out.println();
-		            System.out.println("******* Riconoscimento del target delle frasi usando la regola R1d_lc *******");
+		            System.out.println("******* Riconoscimento del target delle frasi usando la regola R4 *******");
 		            System.out.println();
 		            nome_filegrammatical_dep="grammatical_dep.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 		            nome_filedependencies="dependencies.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 		            nome_fileoutput="r4.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-		            nome_fileinput=R4.r1d_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+		            nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+			        nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+		            nome_fileinput=R4.r4(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);
 	          	   
 	          	    System.out.println();
-		            System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1d_lc *******");
+		            System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R4 *******");
 		            System.out.println();
 		            nome_fileinput="r4.csv";
-		            PrintResultsRule.printResults1a(nome_fileinput);
+		            PrintResultsRule.printResultsRule(nome_fileinput);
          	   }
          	  else
        	      { 
          		 System.out.println();
-	             System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R1d_lc *******");
+	             System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R4 *******");
 	             System.out.println();
 	             nome_filegrammatical_dep="grammatical_dep_preprocessed.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 	             nome_filedependencies="dependencies_preprocessed.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 	             nome_fileoutput="r4_pre.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-	             nome_fileinput=R4.r1d_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+	             nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+		         nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+	             nome_fileinput=R4.r4(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);
             	   
 	             System.out.println();
-		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1d_l *******");
+		         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R4 *******");
 		         System.out.println();
 		         nome_fileinput="r4_pre.csv";
-		         PrintResultsRule.printResults1a(nome_fileinput);
+		         PrintResultsRule.printResultsRule(nome_fileinput);
        	      }
          	 }
             
@@ -451,37 +459,65 @@ public class Main {
          	   if(i==0)    	  
          	   {
          		  System.out.println();
-			      System.out.println("******* Riconoscimento del target delle frasi usando la regola R1e_lc *******");
+			      System.out.println("******* Riconoscimento del target delle frasi usando la regola R5 *******");
 			      System.out.println();
 			      nome_filegrammatical_dep="grammatical_dep.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 			      nome_filedependencies="dependencies.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 			      nome_fileoutput="r5.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-			      nome_fileinput= R5.r1e_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput);
+			      nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+			      nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+			      nome_fileinput= R5.r5(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);
 	           
 	              System.out.println();
-		          System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1e_lc *******");
+		          System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R5 *******");
 		          System.out.println();
 		          nome_fileinput="r5.csv";
-		          PrintResultsRule.printResults1a(nome_fileinput);   
+		          PrintResultsRule.printResultsRule(nome_fileinput);   
          	   }
          	  else
        	      { 
          		     System.out.println();
-			         System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R1e_lc *******");
+			         System.out.println("******* Riconoscimento del target delle frasi con preprocessing usando la regola R5 *******");
 			         System.out.println();
 			         nome_filegrammatical_dep="grammatical_dep_preprocessed.txt"; //identifica il nome del file in cui sono stati memorizzati le dipendenze grammaticali di Stanford delle frasi
 			         nome_filedependencies="dependencies_preprocessed.txt";//identifica il nome del file in cui sono stati memorizzati le dipendenze di Stanford delle frasi
 			         nome_fileoutput="r5_pre.csv"; //identifica il nome del file dove si andranno a memerizzare i risultati ottenuti dalla regola R1a_lc(si memorizzano i target identificati nelle regole)
-			         nome_fileinput=R5.r1e_lc(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput); 
+			         nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+			         nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+			         nome_fileinput=R5.r5(nome_filegrammatical_dep, nome_filedependencies, nome_fileoutput,nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati); 
 	            	            
 			         System.out.println();
-			         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R1e_lc *******");
+			         System.out.println("******* Visulaizzazione dei targets delle frasi estrapolati usando la regola R5 *******");
 			         System.out.println();
 			         nome_fileinput="r5_pre.csv";
-			         PrintResultsRule.printResults1a(nome_fileinput); 
+			         PrintResultsRule.printResultsRule(nome_fileinput); 
        	      }
          	 }
-                      
+
+            if(risposta== 15)
+            {	   
+         	   if(i==0)    	  
+         	   {
+         		  System.out.println();
+			      System.out.println("******* Unificazione dei risultati avuti dalle varie regole *******");
+			      System.out.println();
+			      nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+			      nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole.xlsx";
+			      //RisultatiRegoleUnificati.targetUnificati(nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);   
+         	   }
+         	  else
+       	      { 
+         		     System.out.println();
+         		     System.out.println("******* Unificazione dei risultati avuti dalle varie regole *******");
+			         System.out.println();
+			         nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+			         nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+			         RisultatiRegoleUnificati.targetUnificati(nome_fileInputRisultatiunificati,nomeFileOutputRisultatiunificati);   
+       	      }
+         	 }
+            
+            
+            
             if(risposta== -1)       	
             {
             	System.out.print("Esecuzione terminata del sistema."); 

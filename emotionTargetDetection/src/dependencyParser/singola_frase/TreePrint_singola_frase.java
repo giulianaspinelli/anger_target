@@ -23,6 +23,7 @@ import edu.stanford.nlp.trees.TreebankLanguagePack;
 
 public class TreePrint_singola_frase {
 
+
 	public static void demoDP(LexicalizedParser lp, String filename) throws Exception {
 
 		TreebankLanguagePack tlp = new PennTreebankLanguagePack();
@@ -52,8 +53,9 @@ public class TreePrint_singola_frase {
 //	}
 
 
-	public static void treePrint_singola_frase() throws Exception {
-		
+	//public static void treePrint_singola_frase() throws Exception {
+	public static void main(String[] args) throws Exception {
+	//public static void main(String[] args) throws Exception { 	
 		LexicalizedParser lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz");
 		
 		demoDP(lp,"C:/Users/giuli/Desktop/file_per_progetto/una_frase.txt");

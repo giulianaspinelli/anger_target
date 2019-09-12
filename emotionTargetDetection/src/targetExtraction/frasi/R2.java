@@ -3,6 +3,7 @@ package targetExtraction.frasi;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -14,6 +15,10 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.HasWord;
@@ -40,8 +45,29 @@ import edu.stanford.nlp.trees.TreebankLanguagePack;
 
 public class R2 {
 
-		public static String r1b_lc(String nome_filegrammatical_dep,String nome_filedependencies,String nome_fileoutput) throws Exception { 
+		public static String r2(String nome_filegrammatical_dep,String nome_filedependencies,String nome_fileoutput,String nome_fileInputRisultatiunificati, String nomeFileOutputRisultatiunificati) throws Exception { 
 
+			File dir = new File("periodi");
+			 File[] directoryListing = dir.listFiles();
+			 boolean virgola=true;
+			
+			//String nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx"; //
+				File file = new File("risultatiRegoleUnificati/"+nome_fileInputRisultatiunificati); //
+		     	FileInputStream fis = new FileInputStream(file);//
+				XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			    XSSFSheet sheet = workbook.getSheet("Risultati Regole");
+			    XSSFRow row = sheet.getRow(0);
+			    //String nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+		        String percorsoFileOutput="risultatiRegoleUnificati/"+nomeFileOutputRisultatiunificati;
+		        int col_Rule2=-1;
+			
+		        for(int g=0; g < row.getLastCellNum(); g++)
+		        {
+		            if(row.getCell(g).getStringCellValue().trim().equals("R2"))
+		            	col_Rule2 = g;
+		      
+		        }
+			
 			Scanner s= new Scanner(new File("negativeWord/negativeWord.txt"));//
 			List<String> negativeWord = new ArrayList<>();//
 			while(s.hasNextLine()) //
@@ -62,12 +88,16 @@ public class R2 {
 			File fout = new File("risultati_regole/"+nome_fileoutput); //
 	     	FileOutputStream fos = new FileOutputStream(fout);//
 		    PrintStream ps = new PrintStream(fos); //
-			String r = null;//
+		    String valoreDaInserire = null;//
 
 			int i = 1;
 
 			while (line != null) {
 
+				 if(i<=directoryListing.length)
+                     RisultatiRegoleUnificati.eliminaValoreCella(workbook,sheet,percorsoFileOutput,i,col_Rule2);
+				
+				
 				lista_gramm = line.split(";");
 
 				for(String token: lista_gramm) {
@@ -78,7 +108,7 @@ public class R2 {
 
 					if((ruolo.equals("JJ"))||(ruolo.equals("JJS"))||(ruolo.equals("JJR"))) {
 
-						if(negativeWord.contains(ruoli[0])) {
+						if(negativeWord.contains(ruoli[0])) { //se si sta considerando un aggettivo negativo
 
 							lista_dep = line_2.split(";");
 
@@ -86,19 +116,29 @@ public class R2 {
 
 								String[] tipo_dep = token_dep.split("\\(");
 
-								if (tipo_dep[0].equals("amod")) {
+								if (tipo_dep[0].equals("amod")) {  
 
 									String[] ck = tipo_dep[1].split(", "); //patch-6 + simple-5)
 
 									String[] ckk = ck[1].split("-");
+									
+									/*System.out.println(token_dep); 
+									System.out.println(tipo_dep[1]); 
+									System.out.println(ck[0]); 
+									System.out.println(ck[1]); 
+									System.out.println(ckk[0]); */
 
-									if (ckk[0].equals(ruoli[0])) {
-
+									if (ckk[0].equals(ruoli[0])) {  //ckk[0] contiene la seconda parola presente nella dipendenza amod
+                                                                   // se la seconda parola presente nella dipendenza amod è un aggettivo negativo
+										
 										String[] dep = token_dep.split("-");
 
 										String[] last = dep[0].split("\\(");
 
-										String target = last[1];
+										String target = last[1];   //prende la prima parola che si trova nella dipendenza amod
+										
+										/*System.out.println(token_dep);   
+										System.out.println(last[1]);*/
 
 										for(String token_2: lista_gramm) {
 											String[] ruoli_2 = token_2.split("-");
@@ -106,9 +146,9 @@ public class R2 {
 											String ruolo_2 = ruoli_2[0];
 											String ruolo_3 = ruoli_2[1];
 
-											if(ruolo_2.equals(target)) 
-
-												if((ruolo_3.equals("NN"))||(ruolo_3.equals("NNS"))) {
+											if(ruolo_2.equals(target)) 	
+											{
+												if((ruolo_3.equals("NN"))||(ruolo_3.equals("NNS"))) {  //se la prima parola presente nella dipendenza amod è un nome 
 
 													for(String token_dep_2: lista_dep) {
 
@@ -122,8 +162,10 @@ public class R2 {
 
 															String[] last_2 = dep_2[0].split("\\(");
 
-															String target_2 = last_2[1]; //prende la prima parola che si trova nell'associazione nsubj
-															//System.out.println( last_2[1]);
+															String target_2 = last_2[1]; //prende la prima parola che si trova nella dipendenza nsubj
+															
+															/*System.out.println( token_dep_2);
+															System.out.println( last_2[1]);*/
 
 															for(String token_3: lista_gramm) {
 
@@ -132,32 +174,51 @@ public class R2 {
 																String ruolo_a = ruoli_3[0];
 																String ruolo_b = ruoli_3[1];
 
-																if(ruolo_a.equals(target_2)) 
-
-																	if((ruolo_b.equals("NN"))||(ruolo_b.equals("NNS"))) {
+																if(ruolo_a.equals(target_2))
+																{
+																	if((ruolo_b.equals("NN"))||(ruolo_b.equals("NNS"))) { //se la prima parola che si trova nella dipendenza nsubj è un nome
 
 																		String[] finale = token_dep_2.split(", ");
 
-																		String subj_targ = finale[1].substring(0, finale[1].length()-3);
+																		//String subj_targ = finale[1].substring(0, finale[1].length()-3);
+																		
+																		String[] subj_targ = finale[1].split("-");
+																		
+																		/*System.out.println(token_dep_2);
+																		System.out.println(finale[1]);*/
 
 																		//System.out.println(i+","+subj_targ);
-																		r=i+","+subj_targ;//
-																		System.out.println(r);//
-												                        ps.println(r); //
-
+																		if(target.equals(target_2))  //aggiunta da me, condizione che verifica se la prima parola presente nella dipendenza amod sia uguale alla prima parola presente nella dipendenza nsubj
+																		{
+																			valoreDaInserire=i+","+subj_targ[0];//
+																			System.out.println(valoreDaInserire);//
+																			ps.println(valoreDaInserire); //
+																			valoreDaInserire=subj_targ[0];// si considera come target la serconda parola presente nelladipendenza nsubj
+														                    RisultatiRegoleUnificati.scritturaValore(workbook,sheet,percorsoFileOutput,valoreDaInserire,i,col_Rule2,virgola);
+																		}
+	
 																	} else 																	
 																	{
-																		System.out.println(i+","+"invalid target");	
-												                        ps.println(i+","+"invalid target"); //
-																	}										
+																		System.out.println(i+","+"invalid_target");	
+												                        ps.println(i+","+"invalid_target"); //
+												                        valoreDaInserire="invalid_target";//
+																		RisultatiRegoleUnificati.scritturaValore(workbook,sheet,percorsoFileOutput,valoreDaInserire,i,col_Rule2,virgola);
+																	}	
+																}
+											
 															}
 														}
 													}
 												} else 
 												{
-													System.out.println(i+","+"invalid target");	
-							                        ps.println(i+","+"invalid target"); //
-												}	
+													System.out.println(i+","+"invalid_target");	
+							                        ps.println(i+","+"invalid_target"); //
+							                        valoreDaInserire="invalid_target";//
+													RisultatiRegoleUnificati.scritturaValore(workbook,sheet,percorsoFileOutput,valoreDaInserire,i,col_Rule2,virgola);
+												}
+											}
+
+													
 										}
 									}
 								}
@@ -174,3 +235,5 @@ public class R2 {
 		    return nome_fileoutput;
 		}
 }
+
+

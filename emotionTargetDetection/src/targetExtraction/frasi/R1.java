@@ -4,6 +4,7 @@ package targetExtraction.frasi;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -17,6 +18,10 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.HasWord;
@@ -43,8 +48,30 @@ import edu.stanford.nlp.trees.TreebankLanguagePack;
 
 public class R1 {
 
-	public static String r1a_lc(String nome_filegrammatical_dep,String nome_filedependencies,String nome_fileoutput) throws IOException{ 
+	public static String r1(String nome_filegrammatical_dep,String nome_filedependencies,String nome_fileoutput, String nome_fileInputRisultatiunificati, String nomeFileOutputRisultatiunificati) throws IOException{ 
 
+		 File dir = new File("periodi");
+		 File[] directoryListing = dir.listFiles();
+		 boolean virgola=true;
+		
+		//String nome_fileInputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx"; //
+		File file = new File("risultatiRegoleUnificati/"+nome_fileInputRisultatiunificati); //
+     	FileInputStream fis = new FileInputStream(file);//
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	    XSSFSheet sheet = workbook.getSheet("Risultati Regole");
+	    XSSFRow row = sheet.getRow(0);
+	    //String nomeFileOutputRisultatiunificati="TargetRiconosciutiDaRegole_preprocessed.xlsx";
+        String percorsoFileOutput="risultatiRegoleUnificati/"+nomeFileOutputRisultatiunificati;
+        int col_Rule1=-1;
+	
+        for(int g=0; g < row.getLastCellNum(); g++)
+        {
+            if(row.getCell(g).getStringCellValue().trim().equals("R1"))
+            	col_Rule1 = g;
+      
+        }
+        
+        
 		/*String sa;
 		sa="ciao";
 		sa=sa+"\n";
@@ -71,16 +98,20 @@ public class R1 {
 			File fout = new File("risultati_regole/"+nome_fileoutput); //
 	     	FileOutputStream fos = new FileOutputStream(fout);//
 		    PrintStream ps = new PrintStream(fos); //
-			String r = null;//
+			String valoreDaInserire = null;//
 
 			int i = 1;
 
 			while (line != null) {
 
+				 if(i<=directoryListing.length)
+                     RisultatiRegoleUnificati.eliminaValoreCella(workbook,sheet,percorsoFileOutput,i,col_Rule1);
+				
 				lista_gramm = line.split(";");
 
 				for(String token: lista_gramm) {
-
+					
+		
 					String[] ruoli = token.split("-"); // separazione di token in due parti es token=on-IN allora ruoli[0]=on e ruoli[1]=IN
 					
 					//System.out.println(token);
@@ -90,8 +121,9 @@ public class R1 {
 					//System.out.println(ruoli[1]);
 
 					if((ruolo.equals("JJ"))||(ruolo.equals("JJS"))||(ruolo.equals("JJR"))) {
-						if(negativeWord.contains(ruoli[0])) {  //se la parola a cui è associato come grammatical_dep JJ O JJS O JJR è una parola negativa
+						if(negativeWord.contains(ruoli[0])) {  //se la parola a cui è associato come grammatical_dep JJ O JJS O JJR è una parola negativa (aggettivo negativo)
 
+							
 							/*
 							System.out.println(ruoli[0]);
 							break;
@@ -131,12 +163,13 @@ public class R1 {
 
 										String[] dep = token_dep.split("-");  //token_dep contiene ad es amod(rule-5, stupid-4), viene separato in due parti in dep cioè amod(rule-5  - stupid-4  
 										
-										//System.out.println(token_dep);  
+										
 										//System.out.println(dep[0]);
 
-										String[] last = dep[0].split("\\(");
-                                       String target = last[1];  //contiene il soggetto di amod
-										//System.out.println(last[1]);
+									   String[] last = dep[0].split("\\(");
+                                       String target = last[1];  //contiene il soggetto di amod cioè la prima parola che si trova in prima posizione di amod
+                                       /* System.out.println(token_dep);  
+                                       System.out.println(last[1]);*/
 
 										for(String token_2: lista_gramm) {
 
@@ -150,22 +183,34 @@ public class R1 {
 											//System.out.println(ruoli_2[0]); 
 											//System.out.println(ruoli_2[1]); 
 
-											if(ruolo_2.equals(target))  //se il soggetto di amod è uguale alla parola presente prima di - nella grammatical_dep
-
-												if((ruolo_3.equals("NN"))||(ruolo_3.equals("NNS"))) {    // se alla parola uguale al soggetto di amod è associato NN o NNS
-
+											if(ruolo_2.equals(target))  //se la parola che si trova in prima posizione in amod è uguale alla parola presente prima di - nella grammatical_dep
+											{
+												if((ruolo_3.equals("NN"))||(ruolo_3.equals("NNS"))) {    // se alla parola che si trova in prima posizione nella dipendenza amod è associato NN o NNS
 													//System.out.println(i+","+target);
-													r=i+","+target;//
-													System.out.println(r);//
-							                        ps.println(r); //
-													     
+													valoreDaInserire=i+","+target;//
+													//r=r.replace("-","");
+													ps.println(valoreDaInserire); //   
+													System.out.println(valoreDaInserire);//
+							                       
+							                        //if(i<=directoryListing.length)
+								                       //RisultatiRegoleUnificati.eliminaValoreCella(workbook,sheet,percorsoFileOutput,i,col_Rule1);
+							                        valoreDaInserire=target;//
+							                        RisultatiRegoleUnificati.scritturaValore(workbook,sheet,percorsoFileOutput,valoreDaInserire,i,col_Rule1,virgola);
 												} else 
 												{
-													//System.out.println(i+","+"invalid target");
-													r=i+","+"invalid target";//
-													System.out.println(r);//
-													ps.println(r);//
-												}												
+													//System.out.println(i+","+"invalid_target");
+													valoreDaInserire=i+","+"invalid_target";//
+													ps.println(valoreDaInserire);//
+													System.out.println(valoreDaInserire);//
+													
+													//if(i<=directoryListing.length)
+													   //RisultatiRegoleUnificati.eliminaValoreCella(workbook,sheet,percorsoFileOutput,i,col_Rule1);
+													valoreDaInserire="invalid_target";//
+													RisultatiRegoleUnificati.scritturaValore(workbook,sheet,percorsoFileOutput,valoreDaInserire,i,col_Rule1,virgola);
+													
+												}
+													
+											}														
 										}
 									}
 								}

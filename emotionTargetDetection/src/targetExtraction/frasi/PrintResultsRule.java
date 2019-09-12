@@ -20,7 +20,7 @@ public class PrintResultsRule {
 	 * @throws Exception
 	 */
 
-	public static void printResults1a(String nome_fileinput) throws Exception {
+	public static void printResultsRule(String nome_fileinput) throws Exception {
 		// TODO Auto-generated method stub
 
 		//nome_fileinput="r1a_lc.csv";

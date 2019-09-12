@@ -40,10 +40,10 @@ public class Tagger {
 		return tokenizer.tokenize();
 	}
 
-	public static void tagger() { 
+	//public static void tagger() { 
+	public static void main(String[] args) throws Exception {
 		
-		
-		String str = "~michael.simons also you are incorrect.  ";
+		String str = ": qianshi is working on the ssl session reuse  but this buggy bug system does not allow him assign this ticket  sigh. ";
 		// Parser parser = new Parser(); 
 		Tree tree = parser.parse(str);  
 
