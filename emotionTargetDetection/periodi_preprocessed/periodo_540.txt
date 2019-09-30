@@ -1,1 +1,0 @@
-guys  previously we had a terrible api to fetch metadata.     

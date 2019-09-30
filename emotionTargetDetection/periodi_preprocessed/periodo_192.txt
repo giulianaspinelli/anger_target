@@ -1,1 +1,0 @@
-whoops there's a stupid 'if i != 5 continue' on line ~68 which i should have labelled with a nocommit that's in the patch.      

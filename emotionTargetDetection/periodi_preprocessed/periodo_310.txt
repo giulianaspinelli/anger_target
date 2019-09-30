@@ -1,1 +1,0 @@
-ugly  ugly  ugly part of the fix: using surefire plugin 2.4snapshot.    

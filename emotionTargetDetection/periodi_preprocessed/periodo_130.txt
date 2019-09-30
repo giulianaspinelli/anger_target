@@ -1,1 +1,0 @@
-it was a pretty stupid idea to use a static array of instances for quorumopmonitor.      

@@ -1,1 +1,0 @@
-re openid provider: i assume for testing purposes a stupid provider might do it  right ?     

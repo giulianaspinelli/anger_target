@@ -1,1 +1,0 @@
-it also happens at the very startup after he has loaded only 3 sstables hence datatracker likely have 3 sstables  not a shit load.     

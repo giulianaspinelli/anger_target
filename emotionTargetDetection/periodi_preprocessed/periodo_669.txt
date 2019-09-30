@@ -1,1 +1,0 @@
-hopefully it won't come to that  because that's an ugly solution code that uses classfactory would have an additional requirement to manage a mutex.     

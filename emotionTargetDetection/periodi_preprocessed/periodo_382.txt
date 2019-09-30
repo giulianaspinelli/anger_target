@@ -1,1 +1,0 @@
-it seems stupid to me that currently  you cannot access that data without using a helper function.     

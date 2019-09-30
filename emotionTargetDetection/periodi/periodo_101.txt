@@ -1,1 +1,0 @@
-As far as the query shit  i have no idea if solrdispatchfilter or whatever could/should do Thread.currentThread().setName(x) or whatever (and maybe restore after).     

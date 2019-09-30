@@ -1,1 +1,0 @@
-i had used a stupid custom partitioner  simply switching to hashpartitioner did the trick.     

@@ -1,1 +1,0 @@
-<s:radio theme='simple' name='selectedoption' list='#1:'''/> generates <input name='selectedoption' id='selectedoption1' checked='checked' value='1' type='radio'><label for='selectedoption1'></label> it still writes that empty label tag  which is annoying.     
