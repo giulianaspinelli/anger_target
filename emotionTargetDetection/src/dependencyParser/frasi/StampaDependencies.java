@@ -26,7 +26,7 @@ import edu.stanford.nlp.trees.TreebankLanguagePack;
  * 
  * 
  * 
- * @author Antonio
+ * @author Antonio e Giuliana
  *
  */
 

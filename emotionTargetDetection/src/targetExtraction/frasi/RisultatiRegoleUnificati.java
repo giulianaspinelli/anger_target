@@ -43,6 +43,16 @@ import javax.swing.text.html.HTMLDocument.Iterator;
 
 import java.io.FileInputStream;
  
+/**
+ * Implementa RisultatiRegoleUnificati per unificare i targets uttenuti dalle varie regole considerando 
+ * una scala di precedenza delle regole 
+ * 
+ * console ridirezionata nel file r1e.csv
+ * 
+ * @author Giuliana
+ *
+ */
+
 public class RisultatiRegoleUnificati
 {
 	//public static void main(String args[]) throws Exception

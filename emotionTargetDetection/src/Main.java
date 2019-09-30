@@ -15,6 +15,14 @@ import targetExtraction.frasi.R5;
 import targetExtraction.frasi.RisultatiRegoleUnificati;
 //import targetExtraction.frasi.R6; 
 
+/**
+ * Implementa il Main 
+ * 
+ * @author Giuliana
+ *
+ */
+
+
 public class Main {
 	
 	

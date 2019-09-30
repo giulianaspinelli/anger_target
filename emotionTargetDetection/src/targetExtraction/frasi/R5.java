@@ -39,7 +39,7 @@ import edu.stanford.nlp.trees.TreebankLanguagePack;
  * 
  * console ridirezionata nel file r1e.csv
  * 
- * @author Antonio
+ * @author Antonio e Giuliana
  *
  */
 

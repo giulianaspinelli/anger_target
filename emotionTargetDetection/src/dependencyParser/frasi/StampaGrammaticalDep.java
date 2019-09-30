@@ -30,6 +30,16 @@ import edu.stanford.nlp.trees.PennTreebankLanguagePack;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreebankLanguagePack;
 
+/**
+ * Stampa i POS per ogni commento in sentence
+ * 
+ * 
+ * 
+ * @author Antonio e Giuliana
+ *
+ */
+
+
 public class StampaGrammaticalDep {
 
 	private final static String PCG_MODEL = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";        

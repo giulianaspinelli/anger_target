@@ -10,15 +10,15 @@ import java.io.Reader;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
+/**
+ * Implementa il PrintResultsRule per stampare i targets estratti dalle varie regole 
+ * 
+ * @author Giuliana
+ *
+ */
+
 public class PrintResultsRule {
-	
-	/**
-	 * L'output della console è ridirezionato al file C:/Users/Antonio/Desktop/r1a_results.csv
-	 * 
-	 * 
-	 * @param args
-	 * @throws Exception
-	 */
+
 
 	public static void printResultsRule(String nome_fileinput) throws Exception {
 		// TODO Auto-generated method stub

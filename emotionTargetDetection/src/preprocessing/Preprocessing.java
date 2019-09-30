@@ -36,7 +36,7 @@ import java.util.Scanner;
  * -il nome della cartella dove si trovano i files contenti le frasi da dare in input(path_input),
  * -il nome della cartella dove si trovano i files dove verranno inserite le frasi dove si è eliminato () (path_output)
  * 
- * @author Giuliana Spinelli 
+ * @author Giuliana 
  * 
  *
  */

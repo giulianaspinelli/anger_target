@@ -20,7 +20,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  * 
  * console ridirezionata nel file r1c.csv
  * 
- * @author Antonio
+ * @author Antonio e Giuliana
  *
  */
 
