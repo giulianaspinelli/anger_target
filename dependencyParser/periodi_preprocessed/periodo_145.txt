@@ -1,1 +1,0 @@
-Just a quick and petty comment   public static final String NEW_SEARCHER = newSrchr   public static final String FIRST_SEARCHER = frstSrchr No need to abbreviate so obtusely      

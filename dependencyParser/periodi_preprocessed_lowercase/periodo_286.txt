@@ -1,1 +1,0 @@
-also  all variables except dates are defined notnull  instead of a null for a fk string  they use a single space really annoying    

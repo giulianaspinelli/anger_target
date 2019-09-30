@@ -1,1 +1,0 @@
-The workaround of creating delegate getters and setters for composite key fields is ugly      

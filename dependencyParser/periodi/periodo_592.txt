@@ -1,1 +1,0 @@
-This is somewhat an ugly fix  but at least the output is better for me.     

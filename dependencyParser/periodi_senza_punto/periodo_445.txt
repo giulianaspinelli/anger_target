@@ -1,1 +1,0 @@
-The stupid namespace bug is fixed  but the test still fails       

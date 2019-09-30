@@ -1,1 +1,0 @@
-If you make the Destinations fairly dumb then you end up complicating your session implementations      

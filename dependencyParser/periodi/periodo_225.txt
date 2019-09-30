@@ -1,1 +1,0 @@
-4.2.1.Final still has this annoying issue.      

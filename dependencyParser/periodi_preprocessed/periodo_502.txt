@@ -1,1 +1,0 @@
-I didnt complain that the UTF8 characters would be passed incorrectly  I did complain that the HTMLOutputText  doesnt work properly     

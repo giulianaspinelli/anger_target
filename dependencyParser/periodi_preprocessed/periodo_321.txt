@@ -1,1 +1,0 @@
-Id agree  clients pulling individual config keys is a terrible way to get these clients working     

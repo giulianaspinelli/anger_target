@@ -1,1 +1,0 @@
-sometimes people can be so blind Stupid me didnt saw that SubClass is not extending SuperClass      

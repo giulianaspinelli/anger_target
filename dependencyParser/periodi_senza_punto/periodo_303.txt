@@ -1,1 +1,0 @@
-I am not too fussed about the backward compatibility  the previous behavior was stupid       

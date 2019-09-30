@@ -1,1 +1,0 @@
-i think the functionality of the cev plugins should be integrated in the cas editor in future  because actively using two different editors for xmis is really annoying     

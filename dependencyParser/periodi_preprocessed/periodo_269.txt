@@ -1,1 +1,0 @@
-And yes I agree with you that making MetaAttribute mutable was quite ugly      

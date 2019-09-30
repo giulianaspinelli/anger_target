@@ -1,1 +1,0 @@
-So thats not so good especially since I let you serialize complex schemas      
