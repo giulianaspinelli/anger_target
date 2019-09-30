@@ -1,0 +1,1 @@
+* in some places  the code was doing    system.err.printlngexception which i modified to   exception.printstacktracesystem.err because the original code does not print out the whole stack trace  and it's really annoying when i get a message on the console that doesn't tell me where in the code it happened.     

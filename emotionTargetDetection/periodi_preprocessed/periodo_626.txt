@@ -1,0 +1,1 @@
+what's annoying is that the main complaint is that the artifact can't be found  even though the pom contains the repository reference: <repositories> <repository> <id>mavenplayplugin</id> <name>maven play plugin</name> <url>  </url> </repository> </repositories>      

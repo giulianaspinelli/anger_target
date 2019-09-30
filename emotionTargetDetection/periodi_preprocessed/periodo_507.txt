@@ -1,0 +1,1 @@
+it doesn't crash for me java 1.7  windows 7 64 bit  pdfbox 2.0  but the images rendered are terrible.   

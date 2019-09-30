@@ -1,0 +1,1 @@
+workaround that's approachable:     @inject     @path '$tapestry.scriptaculous/prototype.js'      private asset _prototypejs  boolean beginrender markupwriter writer  throws exception      'tdocument d = writer.getdocument     'telement head = d.find'html/head'     't      'thead.element 'script'  'src'  _prototypejs.toclienturl  but that somehow is ugly.    

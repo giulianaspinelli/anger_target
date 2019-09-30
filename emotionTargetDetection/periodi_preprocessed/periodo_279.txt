@@ -1,0 +1,1 @@
+launchcontext.getuser.equalstokenid.getapplicationsubmitter  this is now a worthless check.      

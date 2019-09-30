@@ -1,0 +1,1 @@
+i do agree that this isn't good on a sweeping level  but i also hate projects that make all instance variables private to the point that classes that should be extensible aren't extensible because you can't extend them and access the data that you need.     

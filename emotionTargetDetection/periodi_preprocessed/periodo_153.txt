@@ -1,0 +1,1 @@
+sorry my last comment was stupid  as 1/8 of 8tb is still larger as integer.max_value i was thinking of long.max_value.     
