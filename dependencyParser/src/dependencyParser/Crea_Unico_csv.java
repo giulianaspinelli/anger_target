@@ -30,7 +30,6 @@ public class Crea_Unico_csv {
 		File dir = new File("csv");
 		File[] directoryListing = dir.listFiles();
 		System.out.println("Numero file: "+directoryListing.length);
-		//System.out.println();
 
 		if (directoryListing != null) {
 		    for (File child : directoryListing) {
